@@ -1,0 +1,38 @@
+package CIP;
+
+import java.net.*;
+
+public class class2 {
+
+    public static void main(String[] args) throws UnknownHostException , MalformedURLException, URISyntaxException {
+        // Get the InetAddress object for the local machine
+        InetAddress local = InetAddress.getLocalHost();
+
+        // Print the IP address and hostname for the local machine
+        System.out.println("Local IP Address: " + local.getHostAddress());
+        System.out.println("Local Hostname: " + local.getHostName());
+
+        // Get the InetAddress object for a remote machine
+        InetAddress remote = InetAddress.getByName("www.google.com");
+
+        // Print the IP address and hostname for the remote machine
+        System.out.println("Remote IP Address: " + remote.getHostAddress());
+        System.out.println("Remote Hostname: " + remote.getHostName());
+
+        URL url = new URL("https://www.example.com/index.html");
+
+        System.out.println("Protocol:  " + url.getProtocol());
+        System.out.println("Host:  " + url.getHost());
+        System.out.println("Port:  " + url.getPort());
+        System.out.println("Path:  " + url.getPath());
+        System.out.println("Query:  " + url.getQuery());
+
+        URI uri = new URI("https", "www.example.com", "/index.html", "param1=value1&param2=value2");
+
+        System.out.println("Scheme: " + uri.getScheme());
+        System.out.println("Host: " + uri.getHost());
+        System.out.println("Path: " + uri.getPath());
+        System.out.println("Query: " + uri.getQuery());
+        
+    }
+}
