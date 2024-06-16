@@ -26,6 +26,7 @@ public class class1io {
         { 
             System.out.println(line);
         }
+         writer.close();
 
     }
 }
